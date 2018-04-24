@@ -11,15 +11,22 @@ require([
     "esri/tasks/Locator",
     "esri/layers/MapImageLayer",
     "esri/PopupTemplate",
+    "esri/layers/TileLayer",
     "dojo/domReady!"
 
-], function (Map, MapView, FeatureLayer, Legend, LayerList, Search, Locator, MapImageLayer, PopupTemplate) {
+], function (Map, MapView, FeatureLayer, Legend, LayerList, Search, Locator, MapImageLayer, PopupTemplate, TileLayer) {
     //Code starts here:
 
     //Config and add map
-    var mapConfig = { basemap: "hybrid" }; 
-    var newmap = new Map(mapConfig);  //using one config file can be used across multiple maps.
+   var mapConfig = { basemap: "gray" }; 
+   var newmap = new Map(mapConfig);  //using one config file can be used across multiple maps.
 
+    var streetTileLayer = new TileLayer({
+        url: "http://services.arcgisonline.com/arcgis/rest/services/World_Shaded_Relief/MapServer",
+        opacity: 0.5
+    });
+
+    var newmap = new Map(mapConfig);
     //Configs the mapview
     var viewConfig = {
         map: newmap,
@@ -122,8 +129,9 @@ require([
     });
 
     //Adds layers to map.
+    newmap.add(streetTileLayer);
     newmap.add(hwyfeaturelayer);
-     newmap.add(catrescueLayer);
+    newmap.add(catrescueLayer);
 
     //Creates legend
     var legend = new Legend({
