@@ -1,0 +1,62 @@
+﻿html, body {
+     width:100%;
+    padding:0px;
+    margin:0px;
+    background-color:lightpink;
+}
+
+#viewDiv {
+    height: 700px;
+    width: 100%;
+    margin:auto;
+    background-color: lightpink;
+    align-content:center;
+}
+
+#gifheader {
+    text-align:center;
+    color:firebrick;
+    margin:0px;
+    padding:0px;
+}
+h2 {
+    margin:0px;
+    border:0px;
+    padding:0px;
+}
+
+hr {
+    border:solid;
+    border-color:black;
+    margin:0px;
+    padding:0px;
+}
+
+openpic, openpic2 {
+    width:200px;
+    height:auto;
+    margin:0px;
+    border:0px;
+    padding:0px;
+}
+
+#headinformation {
+    text-align:center;
+    width:100%;
+    height:auto;
+    background-color:lightpink;
+    padding:5px;
+}
+
+#BolderTitle {
+    text-align:center;
+    font-size:50px;
+    color:coral;
+}
+
+
+
+#footinformation {
+    text-align:center;
+    background-color:lightpink;
+}
